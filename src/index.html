@@ -3,11 +3,122 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>NAMU</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="icon" href="./images/tab-icon.png">
+    <script
+      type="text/javascript"
+      src="scripts/main.js"
+      defer
+    >
+    </script>
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <!--#region HEADER -->
+    <header class="header">
+      <div class="header__girl-wrapper">
+        <div class="header__girl-img-wrapper">
+          <img
+            class="header__girl-img"
+            alt="Girl from Podillya"
+            src="./images/header-girl.png"
+          >
+        </div>
+        <span class="header__girl-title">
+          Дівчина з Поділля<br>В. Тропінін
+        </span>
+      </div>
+      <section class="header__container">
+        <div class="header__menu-wrapper">
+          <div class="header__menu">
+            <div class="header__menu-image"></div>
+            <div class="header__menu-schedule-adress-container">
+              <div class="header__menu-schedule">
+                <span class="header__menu-min-text">Розклад сьогодні:</span>
+                <span class="header__menu-default-text">12:00 - 19:00</span>
+              </div>
+              <div class="header__menu-adress">
+                <span class="header__menu-min-text">Адреса:</span>
+                <a class="header__menu-adress-link" href="https://goo.gl/maps/JpJr1hN42iMC6Rfv8">Київ, вул. М. Грушевського, 6</a>
+              </div>
+            </div>
+            <nav class="header__nav-menu">
+              <ul class="header__nav-menu-list">
+                <li class="header__nav-menu-item">
+                  <a href="#" class="header__nav-menu-link">Спланувати візит</a>
+                </li>
+                <li class="header__nav-menu-item">
+                  <a href="#" class="header__nav-menu-link">Виставки та події</a>
+                </li>
+                <li class="header__nav-menu-item">
+                  <a href="#" class="header__nav-menu-link">Колекція</a>
+                </li>
+              </ul>
+              <div class="header__menu-links-line"></div>
+            </nav>
+            <div class="header__menu-btns-wrapper">
+              <button class="header__menu-buy-ticket-btn">Купити квиток</button>
+              <button class="header__menu-subscription-btn">Стати членом</button>
+            </div>
+          </div>
+        </div>
+        <div class="header__top">
+          <a href="#" class="header__logo">
+            <svg
+              class="header__logo-icon"
+              width="117"
+              height="27"
+              viewBox="0 0 117 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M18.96 0.799998V20.744L4.668 0.799998H0.24V26H3.84V5.516L18.6
+                26H22.56V0.799998H18.96ZM48.977 0.799998V5.588C46.889 2.672 43.649
+                0.583999 39.941 0.583999C32.669 0.583999 27.413 5.984 27.413 13.4C27.413
+                20.816 32.669 26.216 39.941 26.216C43.649 26.216 46.889 24.128 48.977
+                21.212V26H52.469V0.799998H48.977ZM40.085 22.904C34.937 22.904 31.193 18.908
+                31.193 13.4C31.193 7.892 34.937 3.896 40.085 3.896C45.233 3.896 48.977 7.892 48.977
+                13.4C48.977 18.908 45.233 22.904 40.085 22.904ZM88.8309 0.799998H83.6829L73.9629
+                21.752L64.2069 0.799998H58.9509V26H62.5509V5.48L72.0549 26H75.6549L85.2309
+                5.3V26H88.8309V0.799998ZM105.923 26.36C112.187 26.36 116.903 21.788 116.903
+                15.704V0.799998H113.303V15.704C113.303 19.808 110.135 22.904 105.923 22.904C101.711
+                22.904 98.5425 19.808 98.5425 15.704V0.799998H94.9425V15.704C94.9425 21.788 99.6585
+                26.36 105.923 26.36Z" fill="#F1F5F4">
+            </svg>
+          </a>
+          <div class="header__burger-wrapper">
+            <div class="header__burgermenu">
+              <span class="header__burgermenu-icon"></span>
+            </div>
+            <select class="header__select">
+              <option class="header__select-option">UA</option>
+              <option class="header__select-option">EN</option>
+              <option class="header__select-option">RU</option>
+            </select>
+          </div>
+        </div>
+        <div class="header__content">
+          <div class="header__content-wrapper">
+            <span class="header__content-date">
+              10 серпня - 10 листопада
+            </span>
+            <span class="header__content-title">
+              Мистецтво<br>
+              <span class="header__content-title-scnd-line">ХІХ - ХХ ст.</span>
+            </span>
+            <span class="header__content-description">
+              Внесок українських митців у світову культуру 19-20ст
+            </span>
+          </div>
+          <div class="header__content-btn-wrapper">
+            <button class="header__content-btn">Купити квиток</button>
+          </div>
+          <span class="header__content-date-bottom">
+            10.08 - 10.10
+          </span>
+        </div>
+      </section>
+    </header>
+    <!--#endregion HEADER-->
   </body>
 </html>

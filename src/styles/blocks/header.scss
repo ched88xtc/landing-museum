@@ -1,0 +1,597 @@
+.header {
+  max-width: 100%;
+  height: 100vh;
+  background-color: #3f5252;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 40px;
+    position: relative;
+  }
+
+  &__top {
+    position: relative;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+  }
+
+  &__burger-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__select {
+    outline: none;
+    background-color: transparent;
+    color: #f1f5f4;
+    border: none;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+
+    &-option {
+      border: none;
+      background-color: #3f5252;
+
+    }
+  }
+
+  &__burgermenu {
+    position: relative;
+    margin-right: 40px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    &-icon {
+      top: 13px;
+    
+      &,
+      &:before,
+      &:after {
+        width: 30px;
+        position: relative;
+        height: 3px;
+        background: #f1f5f4;
+        display: block;
+        transition: 0.3s;
+      }
+    
+      &:before {
+        content: "";
+        top: -12px;
+        height: 3px;
+        transition: top 300ms 300ms,
+          transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+    
+      &:after {
+        content: "";
+        bottom: -9px;
+        height: 3px;
+        transition: bottom 300ms 300ms,
+          transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+    
+      &.active:before {
+        content: "";
+        top: 0;
+        transform: rotate(45deg) translateX(2px);
+        transition: top 300ms,
+          transform 300ms 300ms cubic-bezier(0.68, 1, 0.27, 1.55);
+      }
+    
+      &.active:after {
+        content: "";
+        bottom: 0;
+        transform: rotate(-45deg) translateX(2px);
+        transition: bottom 300ms,
+          transform 300ms 300ms cubic-bezier(0.68, 1, 0.27, 1.55);
+      }
+    
+      &.active {
+        background: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    color: #f1f5f4;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-date {
+      font-family: "Raleway", Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &-title {
+      margin-top: 10px;
+      font-family: "Playfair Display", Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 96px;
+
+      &-scnd-line {
+        margin-left: 100px;
+      }
+    }
+    
+
+    &-description {
+      max-width: 370px;
+      font-family: "Raleway", Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 40px 0 0 100px;
+    }
+
+    &-btn {
+      height: 60px;
+      width: 270px;
+      background-color: #cd4d31;
+      color: #f1f5f4;
+      font-family: "Raleway", Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 60px 0 0 100px;
+      cursor: pointer;
+      transition: background-color 300ms;
+      outline: none;
+      border: 2px solid transparent;
+
+      &:hover {
+        background-color: #a33d26;
+      }
+
+      &:focus {
+        background-color: #a33d26;
+      }
+    }
+
+    &-date-bottom {
+      font-family: "Playfair Display", Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 80px;
+      opacity: 0.7;
+
+      &:after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        bottom: 4px;
+        margin-left: 20px;
+        width: 535px;
+        height: 1px;
+        background-color: #f1f5f4;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__girl-wrapper {
+    position: absolute;
+    width: 620px;
+    height: 640px;
+    right: 0;
+    bottom: 0;
+    transition: right 500ms;
+
+    &.animate {
+      right: -100vh;
+    }
+  }
+
+  &__girl-img {
+    object-fit: contain;
+    overflow: hidden;
+    position: absolute;
+    width: 620px;
+    height: 670px;
+    z-index: 3;
+    transition: 300ms;
+  }
+  &__girl-title {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #f1f5f4;
+    position: absolute;
+    bottom: 280px;
+    right: 30px;
+    transition: 300ms;
+  }
+
+  &__nav-menu {
+    font-family: "Playfair Display", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+
+    &-list {
+      list-style: none;
+    }
+
+    &-item {
+      margin-bottom: 40px;
+    }
+
+    &-link {
+      position: relative;
+      color: #f1f5f4;
+      text-decoration: none;
+      transition: color 300ms;
+
+      &:after {
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #cd4d31;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+
+      &:hover {
+        color: #cd4d31;
+      }
+
+      &:hover:after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  &__menu {
+    margin: 0 40px;
+
+    &-wrapper {
+      width: 100%;
+      height: 100vh;
+      background: #3f5252;
+      color: #ccc;
+      position: absolute;
+      transition: left 500ms ease-in-out;
+      transition-delay: 200ms;
+      left: -2000px;
+      z-index: 2;
+  
+      &.animate {
+        left: 0;
+      }
+    }
+
+    &-image {
+      background-image: url("../images/header-artist.png");
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      width: 600px;
+      height: 750px;
+      bottom: 0;
+      right: 0;
+    }
+
+    &-schedule-adress-container {
+      font-family: "Raleway", Helvetica, sans-serif;
+      margin: 100px 0 80px;
+      display: flex;
+    }
+
+    &-schedule {
+      display: flex;
+      flex-direction: column;
+      margin-right: 30px;
+    }
+
+    &-adress {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-min-text {
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 20px;
+      color: #f1f5f4;
+    }
+
+    &-default-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &-adress-link {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration: none;
+      color: #f1f5f4;
+      transition: background-color 300ms;
+
+      &:hover {
+        background-color: #cd4d31;
+      }
+    }
+
+    &-links-line {
+      height: 1px;
+      width: 570px;
+      background-color: #f1f5f4;
+      opacity: 0.3;
+      margin-bottom: 60px;
+    }
+
+    &-buy-ticket-btn {
+      height: 60px;
+      width: 270px;
+      margin-right: 30px;
+      background-color: #cd4d31;
+      color: #f1f5f4;
+      font-family: "Raleway", Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+      transition: background-color 300ms;
+      outline: none;
+      border: 2px solid transparent;
+
+      &:hover {
+        background-color: #a33d26;
+      }
+
+      &:focus {
+        background-color: #a33d26;
+      }
+    }
+
+    &-subscription-btn {
+      height: 60px;
+      width: 270px;
+      margin: 0 20px 20px;
+      background-color: transparent;
+      color: #f1f5f4;
+      font-family: "Raleway", Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      cursor: pointer;
+      transition: background-color 300ms, border 300ms;
+      outline: none;
+      border: 2px solid #f1f5f4;
+
+      &:hover {
+        background-color: rgba($color: #2f3b3b, $alpha: 0.5);
+      }
+
+      &:focus {
+        border: 2px solid #cd4d31;
+        background-color: rgba($color: #2f3b3b, $alpha: 0.5);
+        color: #ff542d;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .header__content-title {
+    font-size: 70px;
+    line-height: 70px;
+    &-scnd-line {
+      margin-left: 45px;
+    }
+  }
+
+  .header__girl-img {
+    width: 520px;
+    height: 570px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .header__girl-title {
+    font-size: 14px;
+    bottom: 240px;
+  }
+
+  .header__content-description {
+    margin-left: 55px;
+  }
+
+  .header__content-btn {
+    margin-left: 55px;
+  }
+
+  .header__menu {
+    &-image {
+      width: 410px;
+      height: 510px;
+      bottom: 0;
+      right: 0;
+    }
+
+  }
+}
+
+@media (max-width: 950px) {
+  .header__menu-image {
+    display: none;
+  }
+  .header__menu-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 860px) {
+
+  .header__content {
+    margin-top: 100px;
+  }
+
+  .header__content-date-bottom {
+    display: none;
+  }
+
+  .header__girl-img {
+    max-width: 420px;
+    max-height: 460px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .header__girl-title {
+    display: none;
+  }
+
+  .header__content-description {
+    margin-left: 0;
+    width: 260px;
+
+  }
+
+  .header__content-btn {
+    margin-left: 0;
+    margin-top: 80px;
+  }
+
+  .header__menu-schedule-adress-container {
+    flex-direction: column;
+  }
+
+  .header__menu-schedule {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header__menu-adress {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header__menu-min-text {
+    margin-right: 10px;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .header__girl-img {
+    max-width: 320px;
+    max-height: 350px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .header__nav-menu {
+    font-size: 30px;
+  }
+
+  .header__menu-links-line {
+    width: 100%;
+  }
+
+  .header__menu-buy-ticket-btn {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .header__menu-btns-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 520px) {
+  .header__container {
+    padding: 0 20px;
+  }
+
+  .header__menu-schedule-adress-container {
+    display: none;
+  }
+
+  .header__content-btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__content-btn {
+    width: 280px;
+  }
+
+  .header__content-title {
+    font-size: 40px;
+    line-height: 40px;
+    
+    &-scnd-line {
+      margin-left: 0;
+    }
+  }
+
+  .header__select {
+    display: none;
+  }
+
+  .header__burgermenu {
+    margin-right: 0;
+  }
+
+  .header__girl-img {
+    max-width: 320px;
+    max-height: 360px;
+    bottom: 0;
+    right: 0;
+    left: 154;
+  }
+
+  .header__girl-wrapper {
+    left: 154;
+  }
+  
+  .header__content {
+    margin-top: 40px;
+  }
+
+  .header__nav-menu {
+    margin: 100px 10px 0;
+
+    &-item {
+      margin-bottom: 20px;
+    }
+
+    &-link {
+      font-size: 24px;
+    }
+  }
+}
