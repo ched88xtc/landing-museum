@@ -2,9 +2,15 @@
 @import "fonts";
 @import "typography";
 @import "./blocks/header.scss";
+@import "./blocks/exhibitions.scss";
+@import "./blocks/events.scss";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.main {
+  background-color: #f1f5f4;
 }

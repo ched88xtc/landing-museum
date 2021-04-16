@@ -244,7 +244,7 @@
       transition: color 300ms;
 
       &:after {
-        bottom: 0;
+        bottom: -5px;
         content: "";
         display: block;
         height: 2px;
@@ -275,13 +275,13 @@
       background: #3f5252;
       color: #ccc;
       position: absolute;
-      transition: left 500ms ease-in-out;
-      transition-delay: 200ms;
-      left: -2000px;
+      transition: right 400ms ease-in-out;
+      transition-delay: 300ms;
+      right: -100vw;
       z-index: 2;
   
       &.animate {
-        left: 0;
+        right: 0;
       }
     }
 
@@ -325,6 +325,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
+      color: #f1f5f4;
     }
 
     &-adress-link {
@@ -333,10 +334,10 @@
       line-height: 24px;
       text-decoration: none;
       color: #f1f5f4;
-      transition: background-color 300ms;
+      transition: color 300ms;
 
       &:hover {
-        background-color: #cd4d31;
+        color: #cd4d31;
       }
     }
 
@@ -568,15 +569,15 @@
   }
 
   .header__girl-img {
-    max-width: 320px;
-    max-height: 360px;
+    max-width: 300px;
+    max-height: 300px;
     bottom: 0;
     right: 0;
     left: 154;
   }
 
   .header__girl-wrapper {
-    left: 154;
+    right: -110px;
   }
   
   .header__content {

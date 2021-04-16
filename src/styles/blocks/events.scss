@@ -1,0 +1,222 @@
+.events__title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.events__title {
+  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #1c1b29;
+}
+
+.events__wrapper {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 70px;
+  padding: 100px 40px;
+}
+
+.events__first-row-wrapper {
+  grid-row-start: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.events__scnd-row-wrapper {
+  grid-row-start: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.events__first-row-wrapper :first-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.events__first-row-wrapper :last-child {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.events__scnd-row-wrapper :first-child {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.events__scnd-row-wrapper :last-child {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.events__event-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.events__event-time-date-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+
+.events__event-time {
+  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  color: #cd4d31;
+  margin: 10px 30px 0 80px;
+}
+
+.events__event-date {
+  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 100%;
+  color: #f1f5f4;
+  text-shadow: -1px 0 #cd4d31, 0 1px #cd4d31, 1px 0 #cd4d31, 0 -1px #cd4d31;
+}
+
+.events__event {
+  max-width: 500px;
+
+  &-type {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1c1b29;
+    margin-bottom: 10px;
+  }
+
+  &-name {
+    font-family: "Playfair Display", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1c1b29;
+    margin-bottom: 10px;
+  }
+
+  &-about {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1c1b29;
+    margin-bottom: 60px;
+  }
+}
+
+.events__sign-in-btn {
+  height: 60px;
+  width: 270px;
+  background-color: #cd4d31;
+  color: #f1f5f4;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: background-color 300ms;
+  outline: none;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: #a33d26;
+  }
+
+  &:focus {
+    background-color: #a33d26;
+  }
+}
+
+.events__calendar-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 100px;
+  padding-bottom: 200px;
+}
+
+.events__calendar-link {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c1b29;
+  margin-right: 20px;
+  text-decoration: none;
+  transition: color 300ms;
+
+  &:hover {
+    color: #e64b29;
+  }
+}
+
+.events__calendar-line {
+  height: 1px;
+  width: 70px;
+  background-color: #1c1b29;
+  opacity: 0.5;
+}
+
+@media (max-width: 951px) {
+  .events__photo-img {
+    display: none;
+  }
+
+  .events__first-row-wrapper :first-child {
+    grid-column-end: 4;
+  }
+
+  .events__scnd-row-wrapper :first-child {
+    grid-column-start: 1;
+  }
+
+  .events__calendar-wrapper {
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 80px;
+  }
+  
+  .events__calendar-link {
+    margin-right: 0;
+  }
+  
+  .events__calendar-line {
+    width: 120px;
+    background-color: #1c1b29;
+    opacity: 0.5;
+    position: relative;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .events__title {
+    padding: 0 20px;
+  }
+
+  .events__wrapper {
+    padding: 80px 20px;
+  }
+  
+  .events__event-time-date-wrapper {
+    display: none;
+  }
+  
+  .events__sign-in-btn {
+    width: 100%;
+  }
+}
