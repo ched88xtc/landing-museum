@@ -81,11 +81,24 @@
   font-size: 55px;
   line-height: 100%;
   color: #f1f5f4;
-  text-shadow: -1px 0 #cd4d31, 0 1px #cd4d31, 1px 0 #cd4d31, 0 -1px #cd4d31;
+  text-shadow: #cd4d31 1px 1px 0,
+    #cd4d31 -1px -1px 0,
+    #cd4d31 -1px 1px 0,
+    #cd4d31 1px -1px 0;
 }
 
 .events__event {
   max-width: 500px;
+
+  &-mobile-date {
+    margin-right: 20px;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #cd4d31;
+    display: none;
+  }
 
   &-type {
     font-family: "Raleway", Helvetica, sans-serif;
@@ -115,7 +128,7 @@
   }
 }
 
-.events__sign-in-btn {
+.events__register-btn {
   height: 60px;
   width: 270px;
   background-color: #cd4d31;
@@ -142,8 +155,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 100px;
-  padding-bottom: 200px;
+  padding-right: 40px;
+  padding-bottom: 160px;
 }
 
 .events__calendar-link {
@@ -179,7 +192,9 @@
   .events__scnd-row-wrapper :first-child {
     grid-column-start: 1;
   }
+}
 
+@media (max-width: 820px) {
   .events__calendar-wrapper {
     align-self: center;
     flex-direction: column;
@@ -194,7 +209,7 @@
   }
   
   .events__calendar-line {
-    width: 120px;
+    width: 170px;
     background-color: #1c1b29;
     opacity: 0.5;
     position: relative;
@@ -208,6 +223,10 @@
     padding: 0 20px;
   }
 
+  .events__event-mobile-date {
+    display: inline;
+  }
+
   .events__wrapper {
     padding: 80px 20px;
   }
@@ -216,7 +235,7 @@
     display: none;
   }
   
-  .events__sign-in-btn {
+  .events__register-btn {
     width: 100%;
   }
 }

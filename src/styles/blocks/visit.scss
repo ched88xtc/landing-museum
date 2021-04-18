@@ -1,0 +1,141 @@
+.visit {
+  background-color: #3f5252;
+  
+  &__wrapper {
+    padding: 0 30px;
+  }
+
+  &__title {
+    padding-top: 140px;
+    font-family: "Playfair Display", serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    color: #f1f5f4;
+    max-width: 700px;
+
+    &-and-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 500px;
+    }
+  }
+
+  &__description {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #f1f5f4;
+    max-width: 470px;
+    margin-bottom: 60px;
+
+    
+    &-and-button-wrapper {
+      margin: 100px 0;
+    }
+  }
+
+  &__start-btn {
+    height: 60px;
+    width: 270px;
+    background-color: #cd4d31;
+    color: #f1f5f4;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: background-color 300ms;
+    outline: none;
+    border: 2px solid transparent;
+
+    &:hover {
+      background-color: #a33d26;
+    }
+
+    &:focus {
+      background-color: #a33d26;
+    }
+  }
+
+  &__girl-img {
+    position: absolute;
+    object-fit: contain;
+    max-height: 700px;
+    bottom: 0;
+    left: -30px;
+
+    &-wrapper {
+      position: absolute;
+    }
+  }
+}
+
+@media (max-width: 1275px) {
+  .visit__title-and-text-container {
+    align-items: flex-end;
+    margin: 0;
+  }
+
+  .visit__description-and-button-wrapper {
+    margin-right: 115px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .visit__girl-img {
+    height: 600px;
+  }
+
+  .visit__title {
+    padding-top: 100px;
+    font-size: 72px;
+    max-width: 550px;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .visit__girl-img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 950px) {
+  .visit__title {
+    margin-right: 0;
+  }
+
+  .visit__description-and-button-wrapper {
+    margin-right: 0;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 680px) {
+  .visit__girl-img {
+    display: none;
+  }
+
+  .visit__title-and-text-container {
+    align-items: center;
+  }
+
+  .visit__start-btn {
+    width: 100%;
+  }
+
+  .visit__wrapper {
+    padding: 0 20px;
+  }
+
+  .visit__title {
+    padding-top: 60px;
+    font-size: 48px;
+  }
+
+  .visit__description-and-button-wrapper {
+    margin: 40px 0;
+  }
+}
