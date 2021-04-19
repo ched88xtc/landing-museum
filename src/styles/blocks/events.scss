@@ -13,11 +13,11 @@
 
 .events__wrapper {
   max-width: 1400px;
-  margin: auto;
+  margin: 0 auto;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   gap: 70px;
-  padding: 100px 40px;
+  padding: 100px 40px 150px;
 }
 
 .events__first-row-wrapper {
@@ -156,7 +156,6 @@
   justify-content: flex-end;
   align-items: center;
   padding-right: 40px;
-  padding-bottom: 160px;
 }
 
 .events__calendar-link {

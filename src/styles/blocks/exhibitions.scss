@@ -1,3 +1,9 @@
+.exhibitions {
+  max-width: 1520px;
+  margin: auto;
+  position: relative;
+}
+
 .exhibitions__wrapper {
   max-width: 1000px;
   margin: auto;
@@ -226,9 +232,11 @@
   }
   
   .exhibitions__archive-line {
-    width: 100%;
+    width: 170px;
     background-color: #1c1b29;
     opacity: 0.5;
+    position: relative;
+    margin-top: 10px;
   }
 }
 

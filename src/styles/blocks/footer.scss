@@ -2,6 +2,11 @@
   background-color: #3f5252;
   padding-bottom: 50px;
 
+  &__container {
+    max-width: 1520px;
+    margin: 0 auto;
+  }
+
   &__wrapper {
     max-width: 1200px;
     padding: 160px 40px 60px;

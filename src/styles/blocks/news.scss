@@ -2,7 +2,7 @@
   padding: 150px 40px;
 
   &__wrapper {
-    margin: auto;
+    margin: 0 auto;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -83,10 +83,12 @@
   }
 
   &__all-wrapper {
+    max-width: 1520px;
+    margin: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 200px 0 0;
+    padding: 200px 135px 0;
   }
   
   &__all-link {
