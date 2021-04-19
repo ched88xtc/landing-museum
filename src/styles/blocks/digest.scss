@@ -48,8 +48,8 @@
     background-position: center;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: border 300ms;
-    visibility: hidden;
+    transition: border 300ms, opacity 300ms;
+    opacity: 0;
 
     &:hover {
       border: 1px solid white;
@@ -73,7 +73,7 @@
     -webkit-text-fill-color: #f1f5f4;
 
     &:focus + .digest__subscribe-btn {
-      visibility: visible;
+      opacity: 1;
     }
 
     &::placeholder {

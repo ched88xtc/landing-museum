@@ -33,8 +33,12 @@
             <div class="header__menu-image"></div>
             <div class="header__menu-schedule-adress-container">
               <div class="header__menu-schedule">
-                <span class="header__menu-min-text">Розклад сьогодні:</span>
-                <span class="header__menu-default-text">12:00 - 19:00</span>
+                <a class="header__menu-schedule-link" href="#schedule">
+                  <span class="header__menu-min-text">
+                     Розклад сьогодні:
+                  </span>
+                  <span class="header__menu-default-text">12:00 - 19:00</span>
+                </a>
               </div>
               <div class="header__menu-adress">
                 <span class="header__menu-min-text">Адреса:</span>
@@ -82,7 +86,7 @@
                 5.3V26H88.8309V0.799998ZM105.923 26.36C112.187 26.36 116.903 21.788 116.903
                 15.704V0.799998H113.303V15.704C113.303 19.808 110.135 22.904 105.923 22.904C101.711
                 22.904 98.5425 19.808 98.5425 15.704V0.799998H94.9425V15.704C94.9425 21.788 99.6585
-                26.36 105.923 26.36Z" fill="#F1F5F4">
+                26.36 105.923 26.36Z">
             </svg>
           </a>
           <div class="header__burger-wrapper">
@@ -418,18 +422,30 @@
             <h3 class="footer__title">
               Контакти
             </h3>
-            <p class="footer__text">
+            <span class="footer__text">
               <a class="footer__text-link" href="https://goo.gl/maps/YYwpAzQXjWKikDFb6">
-                Київ,&nbsp;вул.&nbsp;М.&nbsp;Грушевського,&nbsp;6
+                <span class="footer__text-item">
+                  Київ,&nbsp;вул.&nbsp;М.&nbsp;Грушевського,&nbsp;6
+                </span>
               </a>
               <a class="footer__text-link" href="tel:278-13-57">
-                тел. 278-13-57,<br>
-                &emsp;&emsp;278-74-54
+                тел.
+                <span class="footer__text-item">
+                 278-13-57,
+                </span>
+              </a>
+              <a class="footer__text-link" href="tel:278-74-54">
+                &emsp;&emsp;
+                <span class="footer__text-item">
+                  278-74-54
+                </span>
               </a>
               <a class="footer__text-link" href="mailto:info@namu.kiev.ua">
-                info@namu.kiev.ua
+                <span class="footer__text-item">
+                  info@namu.kiev.ua
+                </span>
               </a>
-            </p>
+            </span>
             <div class="footer__icons-wrapper">
               <a
                 class="footer__icon-link"
@@ -539,7 +555,7 @@
             <h3 class="footer__title">
               Розклад роботи
             </h3>
-            <p class="footer__text">
+            <span class="footer__text" id="schedule">
               пн &emsp;вихідний<br>
               вт &emsp;вихідний<br>
               ср &emsp;10:00 - 17:00<br>
@@ -547,42 +563,56 @@
               пт &emsp;12:00 - 19:00<br>
               сб &emsp;11:00 - 18:00<br>
               нд &emsp;10:00 - 17:00<br>
-            </p>
+            </span>
           </div>
           <div class="footer__column-container">
             <h3 class="footer__title">
               Членські програми
             </h3>
-            <p class="footer__text">
+            <span class="footer__text">
               <a class="footer__text-link" href="#vnesok">
-                Зробити разовий внесок
+                <span class="footer__text-item">
+                  Зробити разовий внесок
+                </span>
               </a>
               <a class="footer__text-link" href="#individual">
-                Індивідуальна
+                <span class="footer__text-item">
+                  Індивідуальна
+                </span>
               </a>
               <a class="footer__text-link" href="#group">
-                Корпоративна
+                <span class="footer__text-item">
+                  Корпоративна
+                </span>
               </a>
-            </p>
+            </span>
           </div>
           <div class="footer__column-container">
             <h3 class="footer__title">
               Про нас
             </h3>
-            <p class="footer__text">
+            <span class="footer__text">
               <a class="footer__text-link" href="#history">
-                Історія
+                <span class="footer__text-item">
+                  Історія
+                </span>
               </a>
               <a class="footer__text-link" href="#museum">
-                Обличчя музею
+                <span class="footer__text-item">
+                  Обличчя музею
+                </span>
               </a>
               <a class="footer__text-link" href="#vacancies">
-                Вакансії
+                <span class="footer__text-item">
+                  Вакансії
+                </span>
               </a>
               <a class="footer__text-link" href="#news">
-                Новини
+                <span class="footer__text-item">
+                  Новини
+                </span>
               </a>
-            </p>
+            </span>
           </div>
         </div>
         <div class="footer__copyright-wrapper">

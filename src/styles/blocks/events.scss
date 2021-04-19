@@ -88,7 +88,14 @@
 }
 
 .events__event {
-  max-width: 500px;
+  max-width: 520px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  transition: border-left 400ms;
+
+  &:hover {
+    border-left: 1px solid #cd4d31;
+  }
 
   &-mobile-date {
     margin-right: 20px;

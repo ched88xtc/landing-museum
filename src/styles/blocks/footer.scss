@@ -41,7 +41,7 @@
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 170%;
+    line-height: 200%;
     color: #f1f5f4;
     display: flex;
     flex-direction: column;
@@ -56,11 +56,32 @@
     &-link {
       text-decoration: none;
       color: #f1f5f4;
+    }
+
+    &-item {
+      position: relative;
       opacity: 0.4;
       transition: opacity 300ms;
 
+      &:after {
+        bottom: -5px;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #cd4d31;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+
       &:hover {
         opacity: 1;
+      }
+
+      &:hover:after {
+        width: 100%;
+        left: 0;
       }
     }
   }
@@ -94,12 +115,34 @@
   }
 
   &__icon-link {
+    position: relative;
     opacity: 0.3;
     transition: opacity 300ms;
     text-decoration: none;
 
+    & :nth-child(1) {
+      width: 20px;
+    }
+
+    &:after {
+      bottom: -5px;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #cd4d31;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
     &:hover {
       opacity: 1;
+    }
+
+    &:hover:after {
+      width: 100%;
+      left: 0;
     }
   }
 

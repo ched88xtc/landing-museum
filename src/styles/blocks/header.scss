@@ -5,6 +5,15 @@
   position: relative;
   overflow: hidden;
 
+  &__logo-icon {
+    fill: #f1f5f4;
+    transition: fill 400ms;
+
+    &:hover {
+      fill: #cd4d31;
+    }
+  }
+
   &__container {
     max-width: 1280px;
     height: 730px;
@@ -311,6 +320,12 @@
       display: flex;
       flex-direction: column;
       margin-right: 30px;
+
+      &-link {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+      }
     }
 
     &-adress {
@@ -491,7 +506,7 @@
     flex-direction: column;
   }
 
-  .header__menu-schedule {
+  .header__menu-schedule-link {
     flex-direction: row;
     align-items: center;
   }

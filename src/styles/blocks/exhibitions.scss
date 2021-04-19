@@ -23,7 +23,7 @@
   position: absolute;
   left: 0;
   object-fit: contain;
-  height: 80%;
+  max-height: 500px;
 }
 
 .exhibitions__angel-img {
@@ -47,6 +47,7 @@
   line-height: 58px;
   color: #cd4d31;
   margin-left: -100px;
+  margin-bottom: 20px;
 }
 
 .exhibitions__exhibition-title {
@@ -54,7 +55,6 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  margin-top: 20px;
 }
 
 .exhibitions__title-period {
@@ -84,6 +84,13 @@
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  transition: border-left 400ms;
+
+  &:hover {
+    border-left: 1px solid #cd4d31;
+  }
 }
 
 .exhibitions__buy-btn {
